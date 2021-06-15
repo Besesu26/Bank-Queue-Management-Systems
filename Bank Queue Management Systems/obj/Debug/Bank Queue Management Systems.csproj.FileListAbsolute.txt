@@ -1,0 +1,16 @@
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\bin\Debug\Bank Queue Management Systems.exe.config
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\bin\Debug\Bank Queue Management Systems.exe
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\bin\Debug\Bank Queue Management Systems.pdb
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\obj\Debug\Bank Queue Management Systems.csprojAssemblyReference.cache
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\obj\Debug\Bank_Queue_Management_Systems.Properties.Resources.resources
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\obj\Debug\Bank Queue Management Systems.csproj.GenerateResource.cache
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\obj\Debug\Bank Queue Management Systems.csproj.CoreCompileInputs.cache
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\obj\Debug\Bank Queue Management Systems.exe
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\obj\Debug\Bank Queue Management Systems.pdb
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\bin\Debug\FontAwesome.Sharp.dll
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\obj\Debug\Bank Queue Management Systems.csproj.CopyComplete
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\obj\Debug\Bank_Queue_Management_Systems.MainScreen.resources
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\obj\Debug\Bank_Queue_Management_Systems.TicketScreen.resources
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\obj\Debug\Bank_Queue_Management_Systems.Ticket.resources
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\obj\Debug\Bank_Queue_Management_Systems.Login_frm.resources
+E:\school\C#\bankQueue\Bank Queue Management Systems\Bank Queue Management Systems\obj\Debug\Bank_Queue_Management_Systems.Password.resources
