@@ -1,0 +1,14 @@
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\bin\Debug\Bank Queue System.exe.config
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\bin\Debug\Bank Queue System.exe
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\bin\Debug\Bank Queue System.pdb
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank Queue System.csprojAssemblyReference.cache
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank_Queue_System.main_frm.resources
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank_Queue_System.Properties.Resources.resources
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank Queue System.csproj.GenerateResource.cache
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank Queue System.csproj.CoreCompileInputs.cache
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank Queue System.exe
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank Queue System.pdb
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank_Queue_System.login_frm.resources
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank_Queue_System.ticket_screen_frm.resources
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank_Queue_System.ticket_frm.resources
+C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank_Queue_System.counter_screen_frm.resources
