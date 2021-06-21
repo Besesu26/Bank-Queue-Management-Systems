@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bank_Queue_System.DAO;
+using Bank_Queue_System.DTO;
 
 namespace Bank_Queue_System
 {
@@ -34,10 +37,67 @@ namespace Bank_Queue_System
             this.Close();
         }
 
+
+        public static counter_screen_frm CounterScreen;
         private void btn_login_Click(object sender, EventArgs e)
         {
-            counter_screen_frm counter = new counter_screen_frm();
-            counter.Show();
+            if (txt_username.Text != "" && txt_pass.Text != "" && comboBox1.SelectedItem != null)
+            {
+           Login_DTO login = clsLoginDAO.GetLogin(txt_username.Text);
+                if (login != null)
+                {
+                    if (login.Password == txt_pass.Text)
+                    {
+                        clsCounter.SetCounter(comboBox1.SelectedItem.ToString());
+                        CounterScreen = new counter_screen_frm(comboBox1.SelectedItem.ToString(),login.Name);
+                        CounterScreen.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect Password please try again!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Username please try again!");
+                }
+                
+            }
+            else if(txt_username.Text == "")
+            {
+                MessageBox.Show("Please input username");
+            }
+            else if (txt_pass.Text == "")
+            {
+                MessageBox.Show("Please input password");
+            }
+            else
+            {
+                MessageBox.Show("Please Select Counter");
+            }
+           
+            
+        }
+
+        private void login_frm_Load(object sender, EventArgs e)
+        {
+            ArrayList counter = clsCounter.GetCounter();
+           if(counter!= null)
+            {
+                foreach (object id in counter)
+                {
+                    comboBox1.Items.Add(id.ToString());
+                }
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Sorry there were no counter available");
+                if(result == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
         }
     }
 }

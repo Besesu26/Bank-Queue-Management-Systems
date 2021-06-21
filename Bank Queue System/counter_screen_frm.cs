@@ -8,29 +8,126 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bank_Queue_System.DTO;
+using Bank_Queue_System.DAO;
 
 namespace Bank_Queue_System
 {
     public partial class counter_screen_frm : Form
     {
-        public counter_screen_frm()
+        public counter_screen_frm(string counter,string name)
         {
             InitializeComponent();
+            counterID = counter;
+            username = name;
         }
 
+        private String username;
         private void counter_screen_frm_Load(object sender, EventArgs e)
         {
-            ticket_List.Columns.Add("MyColumn");
-            ticket_List.FullRowSelect = true;
-            ticket_List.GridLines = true;
-            ticket_List.View = System.Windows.Forms.View.List;
+          
             foreach (int ticket_Num in Ticket_DTO.ticket_queue)
             {
-                ListViewItem lvi = new ListViewItem(ticket_Num.ToString("D3"));
-                ticket_List.Items.Add(lvi);
+                ticket_List.Rows.Add(ticket_Num.ToString("D3"));
+            }
+            lb_name.Text = username;
+            timer1.Start();
+            timer3.Start();
+        }
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lb_Date.Text = DateTime.Now.ToLongDateString();
+            lb_time.Text = DateTime.Now.ToLongTimeString();
+        }
+
+
+        int h,m,s;
+        bool _isStart = false;
+
+
+        private String counterID { get; set; }
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            clsCounter.ResetCounter(counterID);
+        }
+
+        private void btn_next_Click(object sender, EventArgs e)
+        {
+            if (Ticket_DTO.ticket_queue.Count > 0)
+            {
+                int firstTicket = (int)Ticket_DTO.ticket_queue[0];
+                lb_ticket.Text = firstTicket.ToString("D3");
+                Ticket_DTO.ticket_queue.RemoveAt(0);
+               
+            }
+            else
+            {
+               MessageBox.Show("Sorry there was no ticket available");
+            }
+          
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            ticket_List.Rows.Clear();
+            foreach (int ticket_Num in Ticket_DTO.ticket_queue)
+            {
+                ticket_List.Rows.Add(ticket_Num.ToString("D3"));
             }
         }
 
-       
+        private void btn_call_Click(object sender, EventArgs e)
+        {
+            if(lb_ticket.Text != "")
+            {
+                main_frm.tv_Screen.displayTicket(counterID, lb_ticket.Text);
+            }
+        }
+
+        private void btn_start_Click(object sender, EventArgs e)
+        {
+            if (lb_ticket.Text != "") 
+            {
+                if (_isStart == false)
+                {
+                    timer2.Start();
+                    btn_start.Text = "Stop";
+                    _isStart = true;
+                }
+                else
+                {
+                    timer2.Stop();
+                    _isStart = false;
+                }
+               
+            }
+            else
+            {
+                MessageBox.Show("You Have No Ticket Right Now, Please Click Next To Get Your Ticket!");
+            }
+           
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (s <= 59)
+            {
+                s++;
+            }
+            else if (s > 59 && m < 59)
+            {
+                s = 0;
+                m++;
+            }
+            else 
+            {
+                m = 0;
+                h++; 
+            }
+
+            lb_timer.Text = h.ToString("D2") + ":" + m.ToString("D2") + ":" + s.ToString("D2");
+        }
     }
 }

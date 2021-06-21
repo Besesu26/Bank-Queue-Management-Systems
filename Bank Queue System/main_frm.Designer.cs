@@ -62,6 +62,7 @@ namespace Bank_Queue_System
             this.btn_TVDisplay.TabIndex = 2;
             this.btn_TVDisplay.Text = "TV Display Screen";
             this.btn_TVDisplay.UseVisualStyleBackColor = true;
+            this.btn_TVDisplay.Click += new System.EventHandler(this.btn_TVDisplay_Click);
             // 
             // main_frm
             // 

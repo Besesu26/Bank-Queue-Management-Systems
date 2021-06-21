@@ -40,21 +40,27 @@ namespace Bank_Queue_System
         private void button1_Click(object sender, EventArgs e)
         {
             get_ticke();
+           
+            
+              
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             get_ticke();
+          
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             get_ticke();
+           
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             get_ticke();
+           
         }
 
         private void button5_Click(object sender, EventArgs e)

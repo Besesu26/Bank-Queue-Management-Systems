@@ -12,3 +12,27 @@ C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank_
 C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank_Queue_System.ticket_screen_frm.resources
 C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank_Queue_System.ticket_frm.resources
 C:\Users\Besesu\source\repos\Bank Queue System\Bank Queue System\obj\Debug\Bank_Queue_System.counter_screen_frm.resources
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\bin\Debug\Bank Queue System.exe.config
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\bin\Debug\Bank Queue System.exe
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\bin\Debug\Bank Queue System.pdb
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank Queue System.csprojAssemblyReference.cache
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank_Queue_System.counter_screen_frm.resources
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank_Queue_System.login_frm.resources
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank_Queue_System.main_frm.resources
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank_Queue_System.Properties.Resources.resources
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank_Queue_System.ticket_frm.resources
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank_Queue_System.ticket_screen_frm.resources
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank Queue System.csproj.GenerateResource.cache
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank Queue System.csproj.CoreCompileInputs.cache
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank Queue System.exe
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank Queue System.pdb
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\bin\Debug\System.Configuration.ConfigurationManager.dll
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\bin\Debug\System.Security.AccessControl.dll
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\bin\Debug\System.Security.Permissions.dll
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\bin\Debug\System.Security.Principal.Windows.dll
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\bin\Debug\System.Configuration.ConfigurationManager.xml
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\bin\Debug\System.Security.AccessControl.xml
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\bin\Debug\System.Security.Permissions.xml
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\bin\Debug\System.Security.Principal.Windows.xml
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank Queue System.csproj.CopyComplete
+E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank_Queue_System.tv_screen_frm.resources

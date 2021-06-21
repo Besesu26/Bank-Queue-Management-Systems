@@ -16,7 +16,7 @@ namespace Bank_Queue_System
         {
             InitializeComponent();
         }
-
+ 
         private void btn_counter_Click(object sender, EventArgs e)
         {
             login_frm login= new login_frm();
@@ -27,6 +27,12 @@ namespace Bank_Queue_System
         {
             ticket_screen_frm ticket = new ticket_screen_frm();
             ticket.Show();
+        }
+        public static tv_screen_frm tv_Screen;
+        private void btn_TVDisplay_Click(object sender, EventArgs e)
+        {
+            tv_Screen = new tv_screen_frm();
+            tv_Screen.Show();
         }
     }
 }
