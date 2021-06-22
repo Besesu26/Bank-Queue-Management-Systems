@@ -40,12 +40,42 @@ namespace Bank_Queue_System
                 lb_ticket6.Text = ticketNum;
             }
 
-            string toSpeak = "Ticket "+ticketNum+"go to"+counterID ;
+            string toSpeak = "Ticket "+ticketNum+"please go to "+counterID ;
             SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer();
-            speechSynthesizer.Rate = 0;
-            speechSynthesizer.Speak(toSpeak);
-            speechSynthesizer.Dispose();
+            speechSynthesizer.SelectVoiceByHints(VoiceGender.Female);
+            speechSynthesizer.Rate = -1;
+            speechSynthesizer.SpeakAsync(toSpeak);
+
         }
+
+        public void clearDisplay(string counterID)
+        {
+            if (counterID == "Counter 1")
+            {
+                lb_ticket1.Text = "";
+            }
+            else if (counterID == "Counter 2")
+            {
+                lb_ticket2.Text = "";
+            }
+            else if (counterID == "Counter 3")
+            {
+                lb_ticket3.Text = "";
+            }
+            else if (counterID == "Counter 4")
+            {
+                lb_ticket4.Text = "";
+            }
+            else if (counterID == "Counter 5")
+            {
+                lb_ticket5.Text = "";
+            }
+            else if (counterID == "Counter 6")
+            {
+                lb_ticket6.Text = "";
+            }
+        }
+      
 
         private void tv_screen_frm_Load(object sender, EventArgs e)
         {

@@ -32,6 +32,7 @@ namespace Bank_Queue_System
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lb_timer = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lb_ticket = new System.Windows.Forms.Label();
@@ -40,19 +41,18 @@ namespace Bank_Queue_System
             this.btn_start = new System.Windows.Forms.Button();
             this.btn_transfer = new System.Windows.Forms.Button();
             this.btn_recall = new System.Windows.Forms.Button();
-            this.btn_call = new System.Windows.Forms.Button();
             this.btn_next = new System.Windows.Forms.Button();
             this.ticket_List = new System.Windows.Forms.DataGridView();
             this.Tick_List = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_name = new System.Windows.Forms.Label();
             this.lb_time = new System.Windows.Forms.Label();
             this.lb_Date = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.lb_name = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -61,9 +61,9 @@ namespace Bank_Queue_System
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticket_List)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -100,11 +100,22 @@ namespace Bank_Queue_System
             this.splitContainer2.Panel2.Controls.Add(this.btn_start);
             this.splitContainer2.Panel2.Controls.Add(this.btn_transfer);
             this.splitContainer2.Panel2.Controls.Add(this.btn_recall);
-            this.splitContainer2.Panel2.Controls.Add(this.btn_call);
             this.splitContainer2.Panel2.Controls.Add(this.btn_next);
             this.splitContainer2.Size = new System.Drawing.Size(973, 479);
             this.splitContainer2.SplitterDistance = 731;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.Controls.Add(this.lb_timer);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lb_ticket);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(105, 48);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(371, 406);
+            this.panel2.TabIndex = 4;
             // 
             // lb_timer
             // 
@@ -159,7 +170,7 @@ namespace Bank_Queue_System
             // btn_start
             // 
             this.btn_start.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_start.Location = new System.Drawing.Point(0, 272);
+            this.btn_start.Location = new System.Drawing.Point(0, 204);
             this.btn_start.Name = "btn_start";
             this.btn_start.Size = new System.Drawing.Size(238, 68);
             this.btn_start.TabIndex = 4;
@@ -170,33 +181,24 @@ namespace Bank_Queue_System
             // btn_transfer
             // 
             this.btn_transfer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_transfer.Location = new System.Drawing.Point(0, 204);
+            this.btn_transfer.Location = new System.Drawing.Point(0, 136);
             this.btn_transfer.Name = "btn_transfer";
             this.btn_transfer.Size = new System.Drawing.Size(238, 68);
             this.btn_transfer.TabIndex = 3;
             this.btn_transfer.Text = "Transfer";
             this.btn_transfer.UseVisualStyleBackColor = true;
+            this.btn_transfer.Click += new System.EventHandler(this.btn_transfer_Click);
             // 
             // btn_recall
             // 
             this.btn_recall.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_recall.Location = new System.Drawing.Point(0, 136);
+            this.btn_recall.Location = new System.Drawing.Point(0, 68);
             this.btn_recall.Name = "btn_recall";
             this.btn_recall.Size = new System.Drawing.Size(238, 68);
-            this.btn_recall.TabIndex = 2;
+            this.btn_recall.TabIndex = 1;
             this.btn_recall.Text = "Recall";
             this.btn_recall.UseVisualStyleBackColor = true;
-            // 
-            // btn_call
-            // 
-            this.btn_call.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_call.Location = new System.Drawing.Point(0, 68);
-            this.btn_call.Name = "btn_call";
-            this.btn_call.Size = new System.Drawing.Size(238, 68);
-            this.btn_call.TabIndex = 1;
-            this.btn_call.Text = "Call";
-            this.btn_call.UseVisualStyleBackColor = true;
-            this.btn_call.Click += new System.EventHandler(this.btn_call_Click);
+            this.btn_recall.Click += new System.EventHandler(this.btn_Recall_Click);
             // 
             // btn_next
             // 
@@ -245,6 +247,17 @@ namespace Bank_Queue_System
             this.panel1.Size = new System.Drawing.Size(1162, 52);
             this.panel1.TabIndex = 1;
             // 
+            // lb_name
+            // 
+            this.lb_name.AutoSize = true;
+            this.lb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_name.Location = new System.Drawing.Point(731, 14);
+            this.lb_name.Name = "lb_name";
+            this.lb_name.Size = new System.Drawing.Size(60, 24);
+            this.lb_name.TabIndex = 3;
+            this.lb_name.Text = "label2";
+            this.lb_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lb_time
             // 
             this.lb_time.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -288,29 +301,6 @@ namespace Bank_Queue_System
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // lb_name
-            // 
-            this.lb_name.AutoSize = true;
-            this.lb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_name.Location = new System.Drawing.Point(731, 14);
-            this.lb_name.Name = "lb_name";
-            this.lb_name.Size = new System.Drawing.Size(60, 24);
-            this.lb_name.TabIndex = 3;
-            this.lb_name.Text = "label2";
-            this.lb_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.Controls.Add(this.lb_timer);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.lb_ticket);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(105, 48);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(371, 406);
-            this.panel2.TabIndex = 4;
-            // 
             // counter_screen_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,11 +321,11 @@ namespace Bank_Queue_System
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticket_List)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -359,11 +349,11 @@ namespace Bank_Queue_System
         private System.Windows.Forms.Button btn_start;
         private System.Windows.Forms.Button btn_transfer;
         private System.Windows.Forms.Button btn_recall;
-        private System.Windows.Forms.Button btn_call;
         private System.Windows.Forms.Button btn_next;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Label lb_name;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer timer4;
     }
 }

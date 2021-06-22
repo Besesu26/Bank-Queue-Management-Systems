@@ -60,7 +60,15 @@ namespace Bank_Queue_System
                 int firstTicket = (int)Ticket_DTO.ticket_queue[0];
                 lb_ticket.Text = firstTicket.ToString("D3");
                 Ticket_DTO.ticket_queue.RemoveAt(0);
-               
+                if (main_frm.tv_Screen != null)
+                {
+                    main_frm.tv_Screen.displayTicket(counterID, lb_ticket.Text);
+                }
+                else
+                {
+                    MessageBox.Show("TV Display is not open!");
+                }
+                clsCounter.StatusCounter(counterID);
             }
             else
             {
@@ -78,12 +86,25 @@ namespace Bank_Queue_System
             }
         }
 
-        private void btn_call_Click(object sender, EventArgs e)
+        private void btn_Recall_Click(object sender, EventArgs e)
         {
-            if(lb_ticket.Text != "")
+            if(lb_ticket.Text != "" && btn_start.Text=="Start")
             {
-                main_frm.tv_Screen.displayTicket(counterID, lb_ticket.Text);
+                if (main_frm.tv_Screen != null)
+                {
+                    main_frm.tv_Screen.displayTicket(counterID, lb_ticket.Text);
+                }
+                else
+                {
+                    MessageBox.Show("TV Display is not open!");
+                }
             }
+        }
+
+        private void btn_transfer_Click(object sender, EventArgs e)
+        {
+            tranfer_frm tranfer = new tranfer_frm();
+            tranfer.Show();
         }
 
         private void btn_start_Click(object sender, EventArgs e)
@@ -100,6 +121,10 @@ namespace Bank_Queue_System
                 {
                     timer2.Stop();
                     _isStart = false;
+                    lb_timer.Text = "00:00:00";
+                    lb_ticket.Text = "";
+                    main_frm.tv_Screen.clearDisplay(counterID);
+                    clsCounter.ClearStatusCounter(counterID);
                 }
                
             }

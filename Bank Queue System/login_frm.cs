@@ -48,7 +48,7 @@ namespace Bank_Queue_System
                 {
                     if (login.Password == txt_pass.Text)
                     {
-                        clsCounter.SetCounter(comboBox1.SelectedItem.ToString());
+                        clsCounter.SetCounter(comboBox1.SelectedItem.ToString(),login.Id);
                         CounterScreen = new counter_screen_frm(comboBox1.SelectedItem.ToString(),login.Name);
                         CounterScreen.Show();
                         this.Close();
