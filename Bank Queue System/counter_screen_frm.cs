@@ -44,9 +44,8 @@ namespace Bank_Queue_System
 
         int h,m,s;
         bool _isStart = false;
-
-
-        private String counterID { get; set; }
+       
+        public String counterID { get; set; }
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -55,25 +54,33 @@ namespace Bank_Queue_System
 
         private void btn_next_Click(object sender, EventArgs e)
         {
-            if (Ticket_DTO.ticket_queue.Count > 0)
+            if(btn_start.Text != "Stop")
             {
-                int firstTicket = (int)Ticket_DTO.ticket_queue[0];
-                lb_ticket.Text = firstTicket.ToString("D3");
-                Ticket_DTO.ticket_queue.RemoveAt(0);
-                if (main_frm.tv_Screen != null)
+                if (Ticket_DTO.ticket_queue.Count > 0)
                 {
-                    main_frm.tv_Screen.displayTicket(counterID, lb_ticket.Text);
+                    int firstTicket = (int)Ticket_DTO.ticket_queue[0];
+                    lb_ticket.Text = firstTicket.ToString("D3");
+                    Ticket_DTO.ticket_queue.RemoveAt(0);
+                    if (main_frm.tv_Screen != null)
+                    {
+                        main_frm.tv_Screen.displayTicket(counterID, lb_ticket.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("TV Display is not open!");
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("TV Display is not open!");
+                    MessageBox.Show("Sorry there was no ticket available");
                 }
-                clsCounter.StatusCounter(counterID);
             }
             else
             {
-               MessageBox.Show("Sorry there was no ticket available");
+                MessageBox.Show("Please click stop to clear your old ticket first before get the next one");
             }
+           
           
         }
 
@@ -101,11 +108,6 @@ namespace Bank_Queue_System
             }
         }
 
-        private void btn_transfer_Click(object sender, EventArgs e)
-        {
-            tranfer_frm tranfer = new tranfer_frm();
-            tranfer.Show();
-        }
 
         private void btn_start_Click(object sender, EventArgs e)
         {
@@ -121,10 +123,14 @@ namespace Bank_Queue_System
                 {
                     timer2.Stop();
                     _isStart = false;
+                    btn_start.Text = "Start";
                     lb_timer.Text = "00:00:00";
+                    h = 0;
+                    m = 0;
+                    s = 0;
                     lb_ticket.Text = "";
                     main_frm.tv_Screen.clearDisplay(counterID);
-                    clsCounter.ClearStatusCounter(counterID);
+                  
                 }
                
             }
@@ -154,5 +160,6 @@ namespace Bank_Queue_System
 
             lb_timer.Text = h.ToString("D2") + ":" + m.ToString("D2") + ":" + s.ToString("D2");
         }
+
     }
 }

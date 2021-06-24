@@ -36,4 +36,3 @@ E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\bin\Debug\System.Securi
 E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\bin\Debug\System.Security.Principal.Windows.xml
 E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank Queue System.csproj.CopyComplete
 E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank_Queue_System.tv_screen_frm.resources
-E:\IT\C#\Bank-Queue-Management-Systems\Bank Queue System\obj\Debug\Bank_Queue_System.tranfer_frm.resources

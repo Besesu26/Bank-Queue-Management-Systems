@@ -39,7 +39,6 @@ namespace Bank_Queue_System
             this.label1 = new System.Windows.Forms.Label();
             this.btn_close = new System.Windows.Forms.Button();
             this.btn_start = new System.Windows.Forms.Button();
-            this.btn_transfer = new System.Windows.Forms.Button();
             this.btn_recall = new System.Windows.Forms.Button();
             this.btn_next = new System.Windows.Forms.Button();
             this.ticket_List = new System.Windows.Forms.DataGridView();
@@ -98,7 +97,6 @@ namespace Bank_Queue_System
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.splitContainer2.Panel2.Controls.Add(this.btn_close);
             this.splitContainer2.Panel2.Controls.Add(this.btn_start);
-            this.splitContainer2.Panel2.Controls.Add(this.btn_transfer);
             this.splitContainer2.Panel2.Controls.Add(this.btn_recall);
             this.splitContainer2.Panel2.Controls.Add(this.btn_next);
             this.splitContainer2.Size = new System.Drawing.Size(973, 479);
@@ -170,24 +168,13 @@ namespace Bank_Queue_System
             // btn_start
             // 
             this.btn_start.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_start.Location = new System.Drawing.Point(0, 204);
+            this.btn_start.Location = new System.Drawing.Point(0, 136);
             this.btn_start.Name = "btn_start";
             this.btn_start.Size = new System.Drawing.Size(238, 68);
             this.btn_start.TabIndex = 4;
             this.btn_start.Text = "Start";
             this.btn_start.UseVisualStyleBackColor = true;
             this.btn_start.Click += new System.EventHandler(this.btn_start_Click);
-            // 
-            // btn_transfer
-            // 
-            this.btn_transfer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_transfer.Location = new System.Drawing.Point(0, 136);
-            this.btn_transfer.Name = "btn_transfer";
-            this.btn_transfer.Size = new System.Drawing.Size(238, 68);
-            this.btn_transfer.TabIndex = 3;
-            this.btn_transfer.Text = "Transfer";
-            this.btn_transfer.UseVisualStyleBackColor = true;
-            this.btn_transfer.Click += new System.EventHandler(this.btn_transfer_Click);
             // 
             // btn_recall
             // 
@@ -347,7 +334,6 @@ namespace Bank_Queue_System
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Button btn_start;
-        private System.Windows.Forms.Button btn_transfer;
         private System.Windows.Forms.Button btn_recall;
         private System.Windows.Forms.Button btn_next;
         private System.Windows.Forms.Timer timer2;

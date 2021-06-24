@@ -103,12 +103,6 @@
     <Compile Include="ticket_screen_frm.Designer.cs">
       <DependentUpon>ticket_screen_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="tranfer_frm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="tranfer_frm.Designer.cs">
-      <DependentUpon>tranfer_frm.cs</DependentUpon>
-    </Compile>
     <Compile Include="tv_screen_frm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,9 +132,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ticket_screen_frm.resx">
       <DependentUpon>ticket_screen_frm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tranfer_frm.resx">
-      <DependentUpon>tranfer_frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tv_screen_frm.resx">
       <DependentUpon>tv_screen_frm.cs</DependentUpon>

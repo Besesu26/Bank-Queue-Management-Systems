@@ -48,10 +48,48 @@ namespace Bank_Queue_System
                 {
                     if (login.Password == txt_pass.Text)
                     {
-                        clsCounter.SetCounter(comboBox1.SelectedItem.ToString(),login.Id);
-                        CounterScreen = new counter_screen_frm(comboBox1.SelectedItem.ToString(),login.Name);
-                        CounterScreen.Show();
-                        this.Close();
+                       if(comboBox1.SelectedIndex == 0)
+                        {
+                            clsCounter.SetCounter(comboBox1.SelectedItem.ToString(), login.Id);
+                            CounterScreen = new counter_screen_frm(comboBox1.SelectedItem.ToString(), login.Name);
+                            CounterScreen.Show();
+                            this.Close();
+                        }else if (comboBox1.SelectedIndex == 1)
+                        {
+                            clsCounter.SetCounter(comboBox1.SelectedItem.ToString(), login.Id);
+                            CounterScreen = new counter_screen_frm(comboBox1.SelectedItem.ToString(), login.Name);
+                            CounterScreen.Show();
+                            this.Close();
+                        }
+                        else if (comboBox1.SelectedIndex == 2)
+                        {
+                            clsCounter.SetCounter(comboBox1.SelectedItem.ToString(), login.Id);
+                            CounterScreen = new counter_screen_frm(comboBox1.SelectedItem.ToString(), login.Name);
+                            CounterScreen.Show();
+                            this.Close();
+                        }
+                        else if (comboBox1.SelectedIndex == 3)
+                        {
+                            clsCounter.SetCounter(comboBox1.SelectedItem.ToString(), login.Id);
+                            CounterScreen = new counter_screen_frm(comboBox1.SelectedItem.ToString(), login.Name);
+                            CounterScreen.Show();
+                            this.Close();
+                        }
+                        else if (comboBox1.SelectedIndex == 4)
+                        {
+                            clsCounter.SetCounter(comboBox1.SelectedItem.ToString(), login.Id);
+                            CounterScreen = new counter_screen_frm(comboBox1.SelectedItem.ToString(), login.Name);
+                            CounterScreen.Show();
+                            this.Close();
+                        }
+                        else if (comboBox1.SelectedIndex == 5)
+                        {
+                            clsCounter.SetCounter(comboBox1.SelectedItem.ToString(), login.Id);
+                            CounterScreen = new counter_screen_frm(comboBox1.SelectedItem.ToString(), login.Name);
+                            CounterScreen.Show();
+                            this.Close();
+                        }
+                        
                     }
                     else
                     {
